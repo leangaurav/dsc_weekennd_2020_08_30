@@ -33,10 +33,13 @@ https://medium.com/the-python-diary
 # Commit format and Solution Format
 - Create a folder by your name in Assignments folder where you will put your solution files. 
 - If your name is already taken create with a number at end
-- Upload assignments as plain text files with all solutions for one assignment in a single file.
+- While giving commit message, use a  meaningful message like  
+  ```git commit -m "Assignment 4,5 Notebooks"```  
+  this helps in seeing quickly till what assignment you have completed  
+- Upload assignments as jupyter notebooks with all solutions for one assignment in a single file.
 - Use this format
   
-  Let File be Assignment1.txt. Its content should look like this 
+  Let File be Assignment1.ipynb. Its content should look like this 
   Q1
   Solution
   
