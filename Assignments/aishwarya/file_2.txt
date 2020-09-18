@@ -1,0 +1,78 @@
+import urllib.request, urllib.error, urllib.parse
+
+url = 'https://en.wikipedia.org/wiki/Python_(programming_language)'
+
+response = urllib.request.urlopen(url)
+webContent = response.read()
+
+print(webContent)
+s = webContent.decode("utf-8")
+print(s.count("python"))
+
+
+
+
+import random
+n = 5
+i = 0
+a= []
+for i in  range(0,5):
+    a.append(random.randint(0,100))
+    
+    
+print(a)
+
+
+
+
+import string
+import random 
+n =5 
+a =[]
+i =0
+for i in range(0,5):
+    a.append(random.choice(string.ascii_uppercase))
+print(a  )
+
+
+
+
+
+#def c_chck(a):
+    
+def c_chk(a):
+    
+    count1=0
+    count2=0
+    
+    for i in a:
+        
+        if i.isupper():
+            count1=count1+1
+        
+        elif i.islower():
+            count2= count2+1
+        else:
+            pass
+        i=+1
+    return ("capital Count", count1, "small count is ", count2)
+      
+    #return count1 , count2 
+
+a = input()
+print(c_chk(a))
+  
+
+
+
+def uni(l):
+    
+    x = []
+    for a in l :
+        if a not in x:
+            x.append(a)
+    return x
+
+l = [1,1,1, 2,2,2, 3,5,4,44,6]
+uni(l)
+            
