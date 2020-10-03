@@ -1,0 +1,27 @@
+exp: (NumberOfNights is not NULL) AND (( IsCertifiedExtendedStay = FALSE) OR (IsCertifiedExtendedStay is NULL))
+exp2: ( NumberOfNights is not NULL ) AND ( ( IsCertifiedExtendedStay = FALSE ) OR ( IsCertifiedExtendedStay is NULL ) )
+exp_dict: {'A': 'NumberOfNights is not NULL', 'B': 'IsCertifiedExtendedStay = FALSE', 'C': 'IsCertifiedExtendedStay is NULL'}
+exp3: ( A ) AND ( ( B ) OR ( C ) )
+expressions: [('( A ) AND ( ( B ) OR ( C ) )', '')]
+
+Expression : ( A ) AND ( ( B ) OR ( C ) ) Result: [['A AND B', 'A AND C']] 
+res: [['A AND B', 'A AND C']]
+res[0]: ['A AND B', 'A AND C']
+sub_exp A AND B
+exp4: NumberOfNights is not NULL AND IsCertifiedExtendedStay = FALSE
+After append:  ['NumberOfNights is not NULL ', 'IsCertifiedExtendedStay = FALSE', 'NumberOfNights < 31']
+NumberOfNights is not NULL 
+attApp_list ['NumberOfNights < 31', 'IsCertifiedExtendedStay = FALSE']
+{'Parameter1': 'NumberOfNights', 'Value1': 30}
+{'Parameter1': 'IsCertifiedExtendedStay', 'Value1': ' FALSE'}
+data [{'Parameter1': 'NumberOfNights', 'Value1': 30, 'UOMCode1': 'Count'}, {'Parameter1': 'IsCertifiedExtendedStay', 'Value1': ' FALSE', 'UOMCode1': 'Count'}]
+sub_exp A AND C
+exp4: NumberOfNights is not NULL AND IsCertifiedExtendedStay is NULL
+After append:  ['NumberOfNights is not NULL ', 'IsCertifiedExtendedStay is NULL', 'NumberOfNights < 31']
+NumberOfNights is not NULL 
+attApp_list ['NumberOfNights < 31', 'IsCertifiedExtendedStay is NULL']
+{'Parameter1': 'NumberOfNights', 'Value1': 30}
+data [{'Parameter1': 'NumberOfNights', 'Value1': 30, 'UOMCode1': 'Count'}]
+Final [[{'Parameter1': 'NumberOfNights', 'Value1': 30, 'UOMCode1': 'Count'}, {'Parameter1': 'IsCertifiedExtendedStay', 'Value1': ' FALSE', 'UOMCode1': 'Count'}], [{'Parameter1': 'NumberOfNights', 'Value1': 30, 'UOMCode1': 'Count'}]]
+
+Process finished with exit code 0
