@@ -1,0 +1,5 @@
+f = open(file1.txt , 'w')
+print("This file is reading itself", file =f)
+data = f.read()
+f.close()
+

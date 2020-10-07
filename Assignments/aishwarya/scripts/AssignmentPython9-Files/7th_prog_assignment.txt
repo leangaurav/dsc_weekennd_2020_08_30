@@ -1,0 +1,12 @@
+import  sys
+f = open(sys.argv[1], "r")
+data2 = f.read().lower()
+l = list(data2)
+d = {}
+for i in l:
+	if d[i] in d:
+		d[i] += 1
+	else :
+		d[i] = 0
+print(d)
+
